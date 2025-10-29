@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snake Pixel Adventure Deluxe</title>
+  <link rel="stylesheet" href="juegosnakelaura.css">
+</head>
+<body>
+  <div class="menu-container" id="menu">
+    <h1>🐍 Snake Pixel Adventure 🍎</h1>
+    
+    <div class="menu-section">
+      <h2>Elige tu serpiente o gusano y su respectivo color:</h2>
+      <div class="option-grid" id="snakeOptions">
+        <img src="assets/serpiente azul.png" data-skin="serpiente azul.png" class="selected">
+        <img src="assets/serpiente verde.png" data-skin="serpiente verde.png">
+        <img src="assets/gusano naranja.png" data-skin="gusano naranja.png">
+        <img src="assets/gusano rojo.png" data-skin="gusano rojo.png">
+      </div>
+    </div>
+
+    <div class="menu-section">
+      <h2>Elige la comida:</h2>
+      <div class="option-grid" id="foodOptions">
+        <img src="assets/manzana.png" data-food="manzana.png" class="selected">
+        <img src="assets/tomate.png" data-food="tomate.png">
+      </div>
+    </div>
+
+    <button id="startGameBtn">🎮 Iniciar Juego</button>
+    <button id="toggleMusicBtn">🔈 Música OFF</button>
+  </div>
+
+  <div class="game-container hidden" id="game">
+    <h1>🐍 Snake Pixel Adventure</h1>
+    <canvas id="gameCanvas" width="400" height="400"></canvas>
+    <div class="controls">
+      <span id="score">Puntaje: 0</span>
+      <button id="restartBtn">🔁 Reiniciar</button>
+    </div>
+  </div>
+
+  <audio id="bgMusic" src="assets/musica_fondo.mp3" loop></audio>
+
+  <script src="juegosnakelaura.js"></script>
+</body>
+</html>
